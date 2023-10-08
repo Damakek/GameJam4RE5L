@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     private bool hasMovedThisInput = false;
 
     public Tilemap tilemap;
+    public Tilemap mines;
+    public Tilemap win;
 
     private void Awake()
     {
@@ -80,10 +82,23 @@ public class PlayerController : MonoBehaviour
                 
 
                 TileBase tile = tilemap.GetTile(playerTilePosition);
+                TileBase mine = mines.GetTile(playerTilePosition);
+                TileBase youWin = win.GetTile(playerTilePosition);
                 
                 if (tile != null)
                 {
                     tilemap.SetTile(playerTilePosition, null); // Remove the tile.
+                }
+                if(mine != null)
+                {
+                    transform.position = new Vector3(-0.491f, -5.46f, 3.136848f);
+                    movePoint.position = new Vector3(-0.491f, -5.46f, 3.136848f);
+                }
+                if(youWin != null)
+                {
+                    Debug.Log("You Win");
+                    transform.position = new Vector3(-0.491f, -5.46f, 3.136848f);
+                    movePoint.position = new Vector3(-0.491f, -5.46f, 3.136848f);
                 }
                
             }
