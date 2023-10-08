@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class ShowHints : MonoBehaviour
 {
     public GameObject hint_start, hint_1, hint_2;
+    public TextMeshProUGUI deathCount;
 
     private void Awake()
     {
@@ -32,6 +35,6 @@ public class ShowHints : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        deathCount.text = "Deaths: " + GameManager.Instance.playerDeaths;
     }
 }

@@ -114,7 +114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3728968012289565055, guid: 4fc90ebe98253544580ac2c110b89ac8, type: 3}
       propertyPath: m_text
-      value: '* Insert answer to tile map*'
+      value: This Country Might Be Doomed After All...
       objectReference: {fileID: 0}
     - target: {fileID: 3728968012289565055, guid: 4fc90ebe98253544580ac2c110b89ac8, type: 3}
       propertyPath: m_fontSize
