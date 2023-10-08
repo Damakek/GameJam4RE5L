@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3431649355327154772}
   - component: {fileID: 3728968012289565055}
   m_Layer: 5
-  m_Name: hint start text
+  m_Name: Hint  1 text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ RectTransform:
   m_GameObject: {fileID: 122382933084437794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.9875, y: 0.975, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3718076852157371386}
@@ -65,8 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '* Insert name*! Get across this field. There have been mines placed about.
-    Find a way for us to get through!'
+  m_text: Damn it! The last one didnt make it. It seems like *insert hint* Good luck!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -93,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -129,7 +128,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 50.028126, y: -25.442652, z: 50.069893, w: -24.744469}
+  m_margin: {x: 73.982315, y: 9.7878475, z: 55.378338, w: 9.868064}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -162,7 +161,7 @@ RectTransform:
   m_GameObject: {fileID: 8855102664905237791}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.9643745, y: 1.5118009, z: 1}
+  m_LocalScale: {x: 11.5972, y: 7.9992437, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3667641285619976342}
@@ -170,7 +169,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: -161}
+  m_AnchoredPosition: {x: 6, y: 167}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4887126383583733941
@@ -201,7 +200,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ca502abc09c00274f8c2cba0e268c5bf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8d4f4973afa963944a0aeb22f4fd000a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

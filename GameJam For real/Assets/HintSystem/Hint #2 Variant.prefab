@@ -20,6 +20,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.975
       objectReference: {fileID: 0}
+    - target: {fileID: 3667641285619976342, guid: 4fc90ebe98253544580ac2c110b89ac8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 18.7
+      objectReference: {fileID: 0}
     - target: {fileID: 3718076852157371386, guid: 4fc90ebe98253544580ac2c110b89ac8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -54,7 +58,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3718076852157371386, guid: 4fc90ebe98253544580ac2c110b89ac8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.019304
+      value: 11.655209
+      objectReference: {fileID: 0}
+    - target: {fileID: 3718076852157371386, guid: 4fc90ebe98253544580ac2c110b89ac8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 7.6943536
       objectReference: {fileID: 0}
     - target: {fileID: 3718076852157371386, guid: 4fc90ebe98253544580ac2c110b89ac8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -90,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3718076852157371386, guid: 4fc90ebe98253544580ac2c110b89ac8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 202
+      value: 168
       objectReference: {fileID: 0}
     - target: {fileID: 3718076852157371386, guid: 4fc90ebe98253544580ac2c110b89ac8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -110,15 +118,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3728968012289565055, guid: 4fc90ebe98253544580ac2c110b89ac8, type: 3}
       propertyPath: m_fontSize
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3728968012289565055, guid: 4fc90ebe98253544580ac2c110b89ac8, type: 3}
       propertyPath: m_margin.w
-      value: -25.727524
+      value: -9.092064
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728968012289565055, guid: 4fc90ebe98253544580ac2c110b89ac8, type: 3}
+      propertyPath: m_margin.y
+      value: 28.733799
+      objectReference: {fileID: 0}
+    - target: {fileID: 3728968012289565055, guid: 4fc90ebe98253544580ac2c110b89ac8, type: 3}
+      propertyPath: m_margin.z
+      value: 56.99401
       objectReference: {fileID: 0}
     - target: {fileID: 3728968012289565055, guid: 4fc90ebe98253544580ac2c110b89ac8, type: 3}
       propertyPath: m_fontSizeBase
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3728968012289565055, guid: 4fc90ebe98253544580ac2c110b89ac8, type: 3}
       propertyPath: m_overflowMode
