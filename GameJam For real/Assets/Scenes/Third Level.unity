@@ -180,6 +180,19 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f4cb3307bbaabc54db36e71b88149e87, type: 3}
+<<<<<<< Updated upstream
+=======
+--- !u!4 &262202121 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3672557697460184939, guid: f4cb3307bbaabc54db36e71b88149e87, type: 3}
+  m_PrefabInstance: {fileID: 262202120}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1839735485 &824983760 stripped
+Tilemap:
+  m_CorrespondingSourceObject: {fileID: 7566240227117127214, guid: 18c4a1f5c2542af4ba89a30408f6a495, type: 3}
+  m_PrefabInstance: {fileID: 4477194970857123292}
+  m_PrefabAsset: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!1 &1031096619
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,6 +204,7 @@ GameObject:
   - component: {fileID: 1031096622}
   - component: {fileID: 1031096621}
   - component: {fileID: 1031096620}
+  - component: {fileID: 1031096623}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -272,6 +286,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1031096623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031096619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce7a29510d5c73d459a5785f31c6fcb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 824983760}
+  player: {fileID: 262202121}
 --- !u!1001 &4477194970857123292
 PrefabInstance:
   m_ObjectHideFlags: 0
