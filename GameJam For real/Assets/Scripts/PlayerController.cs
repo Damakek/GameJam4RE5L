@@ -91,11 +91,13 @@ public class PlayerController : MonoBehaviour
                 }
                 if(mine != null)
                 {
+                    //Collision for mine here
                     transform.position = new Vector3(-0.491f, -5.46f, 3.136848f);
                     movePoint.position = new Vector3(-0.491f, -5.46f, 3.136848f);
                 }
                 if(youWin != null)
                 {
+                    //Collision for win here
                     Debug.Log("You Win");
                     transform.position = new Vector3(-0.491f, -5.46f, 3.136848f);
                     movePoint.position = new Vector3(-0.491f, -5.46f, 3.136848f);
