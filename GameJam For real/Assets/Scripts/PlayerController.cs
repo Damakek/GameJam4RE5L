@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public Tilemap mines;
     public Tilemap win;
 
+    public Animator animator;
+
     private void Awake()
     {
         GameManager.OnGameStateChanged += GameManagerOnGameStateChanged;
@@ -35,6 +37,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         GameManager.Instance.UpdateGameState(GameState.Start);
         movePoint.parent = null;
     }
@@ -63,7 +66,17 @@ public class PlayerController : MonoBehaviour
                     if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), .2f, whatStopsMovement))
                     {
                         movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
-                     
+                        if ((int)movePoint.position.x > (int)transform.position.x)
+                        {
+                            animator.SetTrigger("Move Right");
+                            animator.SetInteger("DIR", 0);
+
+                        }
+                        else if ((int)movePoint.position.x < (int)transform.position.x)
+                        {
+                            animator.SetTrigger("Move Left");
+                            animator.SetInteger("DIR", 0);
+                        }
                         hasMovedThisInput = true;
                     }
                 }
@@ -75,8 +88,19 @@ public class PlayerController : MonoBehaviour
                     if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f), .2f, whatStopsMovement))
                     {
                         movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
-                        
-                        hasMovedThisInput = true;
+                        if((int)movePoint.position.y > (int)transform.position.y)
+                        {
+                            animator.SetTrigger("Move Forward");
+                            animator.SetInteger("DIR", 0);
+                            
+                        }
+                        else if((int)movePoint.position.y < (int)transform.position.y)
+                        {
+                            animator.SetTrigger("Move Backward");
+                            animator.SetInteger("DIR", 3);
+                        }
+
+                            hasMovedThisInput = true;
                     }
                 }
 
