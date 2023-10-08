@@ -176,6 +176,14 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6263062287784820414, guid: f4cb3307bbaabc54db36e71b88149e87, type: 3}
+      propertyPath: win
+      value: 
+      objectReference: {fileID: 4477194970857123295}
+    - target: {fileID: 6263062287784820414, guid: f4cb3307bbaabc54db36e71b88149e87, type: 3}
+      propertyPath: mines
+      value: 
+      objectReference: {fileID: 4477194970857123294}
+    - target: {fileID: 6263062287784820414, guid: f4cb3307bbaabc54db36e71b88149e87, type: 3}
       propertyPath: tilemap
       value: 
       objectReference: {fileID: 4477194970857123293}
@@ -348,6 +356,16 @@ PrefabInstance:
 --- !u!1839735485 &4477194970857123293 stripped
 Tilemap:
   m_CorrespondingSourceObject: {fileID: 8805407285168331945, guid: 18c4a1f5c2542af4ba89a30408f6a495, type: 3}
+  m_PrefabInstance: {fileID: 4477194970857123292}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1839735485 &4477194970857123294 stripped
+Tilemap:
+  m_CorrespondingSourceObject: {fileID: 4855030400363065357, guid: 18c4a1f5c2542af4ba89a30408f6a495, type: 3}
+  m_PrefabInstance: {fileID: 4477194970857123292}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1839735485 &4477194970857123295 stripped
+Tilemap:
+  m_CorrespondingSourceObject: {fileID: 3390732606029461123, guid: 18c4a1f5c2542af4ba89a30408f6a495, type: 3}
   m_PrefabInstance: {fileID: 4477194970857123292}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
