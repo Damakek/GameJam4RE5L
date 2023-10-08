@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.Tilemaps;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class PlayerController : MonoBehaviour
 
     public LayerMask whatStopsMovement;
     private bool hasMovedThisInput = false;
+
+    public Tilemap tilemap;
 
     private void Awake()
     {
@@ -35,6 +39,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Vector3Int playerTilePosition = tilemap.WorldToCell(transform.position);
+        
+        
+        
+
         transform.position = Vector3.MoveTowards(transform.position, movePoint.position, moveSpeed * Time.deltaTime);
 
         if (Vector3.Distance(transform.position, movePoint.position) <= .05f)
@@ -51,6 +60,7 @@ public class PlayerController : MonoBehaviour
                     if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), .2f, whatStopsMovement))
                     {
                         movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
+                     
                         hasMovedThisInput = true;
                     }
                 }
@@ -62,9 +72,20 @@ public class PlayerController : MonoBehaviour
                     if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f), .2f, whatStopsMovement))
                     {
                         movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
+                        
                         hasMovedThisInput = true;
                     }
                 }
+
+                
+
+                TileBase tile = tilemap.GetTile(playerTilePosition);
+                
+                if (tile != null)
+                {
+                    tilemap.SetTile(playerTilePosition, null); // Remove the tile.
+                }
+               
             }
             if (Input.GetAxisRaw("Horizontal") == 0f && Input.GetAxisRaw("Vertical") == 0f)
             {
