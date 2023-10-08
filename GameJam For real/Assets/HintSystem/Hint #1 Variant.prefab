@@ -88,6 +88,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3728968012289565055, guid: 4fc90ebe98253544580ac2c110b89ac8, type: 3}
+      propertyPath: m_text
+      value: Well Soldier, You Saw What The Last Guy Did Wrong, Maybe You Should
+        Avoid The Mine This Time.
+      objectReference: {fileID: 0}
     - target: {fileID: 8855102664905237791, guid: 4fc90ebe98253544580ac2c110b89ac8, type: 3}
       propertyPath: m_Name
       value: Hint #1 Variant

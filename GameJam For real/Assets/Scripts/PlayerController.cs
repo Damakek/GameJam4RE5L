@@ -86,6 +86,7 @@ public class PlayerController : MonoBehaviour
                 {
                     //make it so that player has to move multiple times to delete
                     GameManager.Instance.UpdateGameState(GameState.Playing);
+                    
 
                     if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f), .2f, whatStopsMovement))
                     {
@@ -119,6 +120,8 @@ public class PlayerController : MonoBehaviour
                 if(mine != null)
                 {
                     //Collision for mine here
+                    AudioManager.Instance.src.clip = AudioManager.Instance.explosion;
+                    AudioManager.Instance.src.Play();
                     GameManager.Instance.UpdateGameState(GameState.Death);
                     mines.SetTile(playerTilePosition, ash);
                     transform.position = new Vector3(-0.491f, -5.46f, 3.136848f);
