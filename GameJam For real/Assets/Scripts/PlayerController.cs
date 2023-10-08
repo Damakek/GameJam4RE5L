@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public Tilemap mines;
     public Tilemap win;
 
+    public TileBase ash;
+
     public Animator animator;
 
     private void Awake()
@@ -118,6 +120,7 @@ public class PlayerController : MonoBehaviour
                 {
                     //Collision for mine here
                     GameManager.Instance.UpdateGameState(GameState.Death);
+                    mines.SetTile(playerTilePosition, ash);
                     transform.position = new Vector3(-0.491f, -5.46f, 3.136848f);
                     movePoint.position = new Vector3(-0.491f, -5.46f, 3.136848f);
                 }
