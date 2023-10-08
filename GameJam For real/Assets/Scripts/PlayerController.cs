@@ -10,9 +10,25 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatStopsMovement;
     private bool hasMovedThisInput = false;
 
+    private void Awake()
+    {
+        GameManager.OnGameStateChanged += GameManagerOnGameStateChanged;
+    }
+
+    private void OnDestroy()
+    {
+        GameManager.OnGameStateChanged -= GameManagerOnGameStateChanged;
+    }
+
+    private void GameManagerOnGameStateChanged(GameState state)
+    {
+        
+    }
+
     // Start is called before the first frame update
     void Start()
     {
+        GameManager.Instance.UpdateGameState(GameState.Start);
         movePoint.parent = null;
     }
 
@@ -29,6 +45,9 @@ public class PlayerController : MonoBehaviour
 
                 if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
                 {
+
+                    GameManager.Instance.UpdateGameState(GameState.Playing);
+
                     if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), .2f, whatStopsMovement))
                     {
                         movePoint.position += new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
@@ -37,6 +56,9 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
                 {
+                    //make it so that player has to move multiple times to delete
+                    GameManager.Instance.UpdateGameState(GameState.Playing);
+
                     if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f), .2f, whatStopsMovement))
                     {
                         movePoint.position += new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f);
