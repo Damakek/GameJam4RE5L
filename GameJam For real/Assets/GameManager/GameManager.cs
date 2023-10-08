@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject hint_popup;
     public GameObject temp;
+    
+    public float playerDeaths;
+    public float playerWins;
 
     private void Awake()
     {
@@ -41,11 +45,8 @@ public class GameManager : MonoBehaviour
             case GameState.Playing:
                 HandlePlaying();
                 break;
-            case GameState.Death_1:
-                HandleFirstDeath();
-                break;
-            case GameState.Death_2:
-                HandleOtherDeaths();
+            case GameState.Death:
+                HandleDeaths();
                 break;
             case GameState.Win:
                 HandleWin();
@@ -63,19 +64,30 @@ public class GameManager : MonoBehaviour
         temp = GameObject.Instantiate(hint_popup);
     }
 
-    private void HandleFirstDeath()
+    private void HandleDeaths()
     {
-
-    }
-
-    private void HandleOtherDeaths()
-    {
-
+        playerDeaths++;
+        temp = Instantiate(hint_popup);
     }
 
     private void HandleWin()
     {
+        Destroy(temp);
 
+        playerWins++;
+
+        if(playerWins == 1)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        if (playerWins == 2)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        if (playerWins == 3)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     private void HandlePlaying()
@@ -89,7 +101,6 @@ public enum GameState
 {
     Start,
     Playing,
-    Death_1,
-    Death_2,
+    Death,
     Win,
 }
