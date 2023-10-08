@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public GameState State;
 
+    public GameObject hint_popup;
+    public GameObject temp;
+
     private void Awake()
     {
         Instance = this;
@@ -18,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        UpdateGameState(GameState.Start);
+      
     }
 
     void Update()
@@ -57,7 +60,7 @@ public class GameManager : MonoBehaviour
 
     private void HandleGameStart()
     {
-
+        temp = GameObject.Instantiate(hint_popup);
     }
 
     private void HandleFirstDeath()
@@ -77,7 +80,7 @@ public class GameManager : MonoBehaviour
 
     private void HandlePlaying()
     {
-
+        Destroy(temp);
     }
 }
 
