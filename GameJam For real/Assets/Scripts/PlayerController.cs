@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 
 public class PlayerController : MonoBehaviour
 {
+
     public float moveSpeed = 2f;
     public Transform movePoint;
 
@@ -56,7 +57,7 @@ public class PlayerController : MonoBehaviour
 
                 if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
                 {
-
+                    //make it so that player has to move multiple times to delete
                     GameManager.Instance.UpdateGameState(GameState.Playing);
 
                     if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f), .2f, whatStopsMovement))
@@ -92,12 +93,14 @@ public class PlayerController : MonoBehaviour
                 if(mine != null)
                 {
                     //Collision for mine here
+                    GameManager.Instance.UpdateGameState(GameState.Death);
                     transform.position = new Vector3(-0.491f, -5.46f, 3.136848f);
                     movePoint.position = new Vector3(-0.491f, -5.46f, 3.136848f);
                 }
                 if(youWin != null)
                 {
                     //Collision for win here
+                    GameManager.Instance.UpdateGameState(GameState.Win);
                     Debug.Log("You Win");
                     transform.position = new Vector3(-0.491f, -5.46f, 3.136848f);
                     movePoint.position = new Vector3(-0.491f, -5.46f, 3.136848f);

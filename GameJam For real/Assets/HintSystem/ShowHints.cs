@@ -19,8 +19,8 @@ public class ShowHints : MonoBehaviour
     private void GameManagerOnGameStateChanged(GameState state)
     {
         hint_start.SetActive(state == GameState.Start);
-        hint_1.SetActive(state == GameState.Death_1);
-        hint_2.SetActive(state == GameState.Death_2);
+        hint_1.SetActive(GameManager.Instance.playerDeaths == 1 && state == GameState.Death);
+        hint_2.SetActive(GameManager.Instance.playerDeaths > 1 && state == GameState.Death);
     }
 
     // Start is called before the first frame update
